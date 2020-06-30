@@ -264,13 +264,11 @@ a {
   position: absolute;
   top: 80vh;
   left: 5vw;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  border: solid 1px darken(#f7ca18, 8%);
+  border: solid 2px darken(#f7ca18, 8%);
   transform-origin: top left;
   transform: scale(0) rotate(0deg) translate(-50%, -50%);
   animation: cube 12s ease-in forwards infinite;
+
   &:nth-child(2n) {
     border-color: lighten(#f7ca18, 10%);
   }
