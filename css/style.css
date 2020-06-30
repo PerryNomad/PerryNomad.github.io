@@ -39,11 +39,6 @@ a {
   color: inherit;
 }
 
-::selection {
-  background-color: #f7ca18;
-  color: #1b1b1b;
-}
-
 .nav {
   width: 100%;
   background-color: #0b0b0b;
@@ -101,6 +96,11 @@ a {
   width: 100%;
   height: 2px;
   background-color: #f7ca18;
+}
+
+::selection {
+  background-color: #f7ca18;
+  color: #1b1b1b;
 }
 
 .nav li:nth-child(1) {
@@ -224,6 +224,47 @@ a {
 .text__paragraph span {
   color: #f7ca18;
   margin-right: 10px;
+}
+
+.rectangle {
+  position: absolute;
+  top: 80vh;
+  left: 5vw;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: solid 1px #deb308;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+}
+.rectangle:nth-child(2n) {
+  border-color: #f9d549;
+}
+.rectangle:nth-child(2) {
+  animation-delay: 2s;
+  left: 15vw;
+  top: 30vh;
+}
+.rectangle:nth-child(3) {
+  animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+.rectangle:nth-child(4) {
+  animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.rectangle:nth-child(5) {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.rectangle:nth-child(6) {
+  animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
 }
 
 .cube {
@@ -670,7 +711,11 @@ a {
   background-image: url("../img/autosell.png");
 }
 
-@media all and (max-width: 510px) {
+.card-movie-navigation__list li.is-active {
+  background-color: #f7ca18;
+}
+
+@media all and (max-width: 900px) {
   .nav li {
     display: block;
     width: 100%;
